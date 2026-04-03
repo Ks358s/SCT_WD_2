@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Glass Stopwatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="glass-card" aria-label="Stopwatch panel">
+      <p class="eyebrow">Precision timer</p>
+      <h1>Stopwatch</h1>
+
+      <div class="time-wrap" role="timer" aria-live="polite">
+        <span id="timeDisplay">00:00:00.00</span>
+      </div>
+
+      <div class="actions">
+        <button id="startPauseBtn" class="btn btn-primary" type="button">Start</button>
+        <button id="lapBtn" class="btn btn-secondary" type="button" disabled>Lap</button>
+        <button id="resetBtn" class="btn btn-ghost" type="button" disabled>Reset</button>
+      </div>
+
+      <section class="laps-wrap" aria-label="Lap times">
+        <div class="laps-head">
+          <h2>Laps</h2>
+          <button id="clearLapsBtn" class="text-btn" type="button" disabled>Clear</button>
+        </div>
+        <ol id="lapsList" class="laps-list"></ol>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
